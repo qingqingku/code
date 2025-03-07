@@ -50,15 +50,46 @@
 }
 .download{
     width: 124px;
-    height: 148px;
+    height: 0px;
     /* 让这个框默认不存在，滑上才有 */
     background-color: white;
     box-shadow: 0 1px 5px #aaa;
     position: absolute;
     top: 40px;
+    /* 距离li下载APP的上边40px */
     left: 50%;
     margin-left: -62px;
     overflow: hidden;
     /* 固定位置处理为绝对位置，且相对于下载APP这一容器而言 */
+}
+.download img{
+    width: 90px;
+    margin-top: 18px;
+}
+.download p{
+    line-height: 12px;
+    /* 单行文本居中 */
+    color: #333;
+    font-size: 12px;
+}
+/* >表示直接子代 */
+.black-nav-left li:hover>.download{
+    height: 148px;
+}
+/* 滑到有download的li才显示 */
+.arrow{
+    width: 0;
+    height: 0;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    margin-left: -8px;
+    display: none;
+}
+.black-nav-left li:hover>.arrow{
+    display: block;
 }
 /* 黑色导航结束 */
